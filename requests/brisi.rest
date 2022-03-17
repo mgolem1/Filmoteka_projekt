@@ -1,0 +1,2 @@
+DELETE http://localhost:3001/api/filmovi/622246c2f6f49b320dc52ceb
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1nb2xlbTEiLCJpZCI6IjYyMTEwZjU2YTQ0NDZhYTQwMDQxYTA1NSIsImlhdCI6MTY0NTM0OTQ4Nn0.m5b70cajheYEwpanpWX1_A4VjqCXbctlDfMHwkEzniU

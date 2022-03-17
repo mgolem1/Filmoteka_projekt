@@ -1,0 +1,15 @@
+
+
+POST http://localhost:3001/api/filmovi 
+Content-Type: application/json 
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impvc2lwYSIsImlkIjoiNjIxZmEwZGUyOWExZGY2ODUxMDI1Mjg5IiwiaWF0IjoxNjQ2MzAwMDYzfQ.gBI2IdWmu9LlLrrTcZw5XmSZgwLQbKSzAwzipgvyomU
+
+{
+    "naziv": "Departed",
+      "zanr":"psihološki triler",
+      "datum": "019-05-30T19:20:14.298Z",
+      "stanje":"Posudba",
+      "kolicina": 1,
+      "korisnik":"6210cf13255e39549ceacac0"
+
+}
