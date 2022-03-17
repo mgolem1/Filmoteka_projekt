@@ -1,0 +1,11 @@
+{
+  "name": "projekt-mgolem1",
+  "version": "1.0.0",
+  "description": "- [x] - Opis projekta - [ ] - Početna struktura aplikacije - [ ] - Prototip - [ ] - Konzultacije - [ ] - Finalna verzija - [ ] - Obrana projekta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

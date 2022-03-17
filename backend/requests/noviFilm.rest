@@ -1,0 +1,11 @@
+POST https://localhost:3001/api/filmoviContent-Type: application/json 
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1nb2xlbTEiLCJpZCI6IjYyMTEwZjU2YTQ0NDZhYTQwMDQxYTA1NSIsImlhdCI6MTY0NTM1MDQyMn0.GnVIh7UO4bAlqkOg92eeGsLiaXnRurLoZ3st4JmOWYs
+
+{
+    "naziv": "the godfather",
+    "zanr": "drama",
+    "datum": "2019-05-30T19:20:14.298Z",
+    "stanje":"Povrat",
+    "kolicina":1,
+    "korisnik": "62110f56a4446aa40041a055"
+}
