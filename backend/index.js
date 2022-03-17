@@ -5,6 +5,10 @@ const logger = require('./utilis/logger')
 
 const server = http.createServer(app)
 
-server.listen(config.PORT, () => {
-  logger.info(`Server je pokrenut na portu ${config.PORT}`)
+const PORT = process.env.PORT || 3001
+	
+app.listen(PORT, () => {
+	
+    console.log(`Server sluša na portu ${PORT}`);
+	
 })
