@@ -1,5 +1,5 @@
 import axios from 'axios'
-const osnovniUrl = '/api/login'
+const osnovniUrl = 'http://localhost:3001/api/login'
 const islogin=()=>{
   return true;
 }

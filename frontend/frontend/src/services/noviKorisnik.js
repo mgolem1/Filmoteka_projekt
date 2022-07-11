@@ -1,8 +1,9 @@
 import axios from 'axios'
-const osnovniUrl = '/api/korisnici'
+const osnovniUrl = 'http://localhost:3001/api/korisnici'
 
 const registracija = async podaci => {
-    return axios.post(osnovniUrl, podaci)
+    const odgovor = await axios.post(osnovniUrl, podaci)
+  return odgovor.data
 }
 
 export default {registracija}

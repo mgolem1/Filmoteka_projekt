@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 const korisniciRouter = require('express').Router()
 const Korisnik = require('../models/korisnik')
 
@@ -19,18 +20,36 @@ korisniciRouter.post('/', async (req, res) => {
             error: 'Već postoji korisnik'
         })
     }
-    else{
-        const korisnik = new Korisnik({
+    const korisnik = new Korisnik({
             username: sadrzaj.username,
             ime: sadrzaj.ime,
             passHash: passHash,
             _id:sadrzaj._id
         })
+        
+         korisnik.save( ( err ) => {
+                         if( err ){
+                            return console.log( err );
+                         } else{
+                            return console.log( 'You have registered successfully' );
+                         }
+                      } );
+        
+        //console.log(token)
+        
+        
+
     
-        const noviKorisnik = await korisnik.save()
-        res.json(noviKorisnik)
-    }
-    
+        const userToken = {
+            username: korisnik.username,
+            id: korisnik._id
+        }
+
+        const token = jwt.sign(userToken, process.env.SECRET)
+        
+    res.status(200).send({
+            token:token, username: korisnik.username, ime: korisnik.ime,_id:korisnik._id
+        })
 })
 
 module.exports = korisniciRouter

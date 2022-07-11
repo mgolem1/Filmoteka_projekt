@@ -28,8 +28,5 @@ loginRouter.post('/', async (req, res) => {
       token:token, username: korisnik.username, ime: korisnik.ime,_id:korisnik._id
   })
 })
-loginRouter.get('/', async (req, res)=>{
-
-})
 
 module.exports = loginRouter

@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 
 const dohvatiToken = req => {
   const auth = req.get('authorization')
+  console.log(auth)
   if (auth && auth.toLowerCase().startsWith('bearer')){
     return auth.substring(7)
   }
@@ -20,6 +21,7 @@ filmoviRouter.get('/', async (req, res) => {
 
     const podatak = req.body
     const token = dohvatiToken(req)
+    console.log(token+".................2")
     if(token){
           const dekToken = jwt.verify(token, process.env.SECRET)
           if (!token || !dekToken.id){
@@ -129,8 +131,10 @@ filmoviRouter.get('/:id', async(req, res, next) => {
   })
   
   filmoviRouter.post('/',async  (req, res, next) => {
+    
     const podatak = req.body
     const token = dohvatiToken(req)
+    console.log(token)
     const dekToken = jwt.verify(token, process.env.SECRET)
     if (!token || !dekToken.id){
       return res.status(401).json({error: 'Neispravni token'})

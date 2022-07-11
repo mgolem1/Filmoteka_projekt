@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const osnovniUrl = '/api/filmovi'
+const osnovniUrl = 'http://localhost:3001/api/filmovi'
 
 let token = null
 const postaviToken = (noviToken) => {

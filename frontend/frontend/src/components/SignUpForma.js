@@ -38,6 +38,8 @@ const SignUpForma = () => {
             "prijavljeniKorisnik",
             JSON.stringify(korisnik)
           );
+          console.log(korisnik)
+          console.log("token: "+korisnik.token)
           filmAkcija.postaviToken(korisnik.token);
           postaviKorisnika(korisnik);
           postaviUsername("");
